@@ -101,7 +101,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-
+        
     - name: Check space usage
       id: package
       run: |
@@ -110,7 +110,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-      - name: Compile firmware
+    - name: Compile firmware
         run: |
           make -j$(nproc) || make -j1 V=s
           echo "======================="
