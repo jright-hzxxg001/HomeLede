@@ -36,7 +36,7 @@ env:
   TZ: Asia/Shanghai
   
 jobs:
-  build:
+  build_openwrt:
     runs-on: ubuntu-latest
      
     - name: Initialization environment
