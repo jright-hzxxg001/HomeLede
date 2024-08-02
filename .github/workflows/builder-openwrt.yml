@@ -10,8 +10,6 @@
 # See /LICENSE for more information.
 #
 
-name: Builder OpenWrt 
-
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -23,19 +21,7 @@ on:
   # schedule:
   #   - cron: 0 23 * * *
 
-
-
-jobs:
-
-  build_openwrt:
-
-    name: Build OpenWrt Firmware
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Space cleanup and Initialization environment
-        env:
+env:
   REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
   REPO_BRANCH: k5
   FEEDS_CONF: feeds.conf.default
